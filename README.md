@@ -53,3 +53,17 @@ kubectl get pods
 kubectl get services
 
 kubectl apply -f chuck_deployment.yml
+
+kubectl apply -f chuck_service.yaml
+
+kubectl get pods
+
+kubectl get services
+
+kubectl get deployments
+
+### Keen
+
+kubectl apply -f keen.yml
+
+kubectl get services

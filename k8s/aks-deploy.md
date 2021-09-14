@@ -18,3 +18,7 @@ az aks create --resource-group AKSTest --name AKSCluster \
 --max-count 5
 
 az aks get-credentials --resource-group AKSTest --name AKSCluster
+
+## Take down
+
+az group delete --name AKSTest --yes
