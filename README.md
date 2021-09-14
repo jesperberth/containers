@@ -42,6 +42,10 @@ docker push jesperberth/website:latest
 
 ## Kubernetes
 
+git clone https://github.com/jesperberth/containers.git
+
+cd containers
+
 kubectl get nodes
 
 kubectl get pods
