@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chuck
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      # manage pods with the label app: nginx
+      app: chuck
+  template:
+    metadata:
+      labels:
+        app: chuck
+    spec:
+      containers:
+        - name: chuck
+          image: jesperberth/website:latest
+          ports:
+            - containerPort: 80

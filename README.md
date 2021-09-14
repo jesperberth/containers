@@ -39,3 +39,13 @@ docker tag website:latest jesperberth/website:latest
 docker login
 
 docker push jesperberth/website:latest
+
+## Kubernetes
+
+kubectl get nodes
+
+kubectl get pods
+
+kubectl get services
+
+kubectl apply -f chuck_deployment.yml
