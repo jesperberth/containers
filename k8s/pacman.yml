@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pacman
+  labels:
+    app: pacman
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      name: http
+  selector:
+    app: pacman
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pacman
+spec:
+  selector:
+    matchLabels:
+      app: pacman
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pacman
+    spec:
+      containers:
+        - name: pacman-kontainer
+          image: jesperberth/pacman:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
