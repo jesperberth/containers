@@ -7,7 +7,7 @@ az ad sp create-for-rbac --skip-assignment --name AKSClusterServicePrincipal
 az aks create --resource-group AKSTest --name AKSCluster \
 --service-principal <appid> \
 --client-secret <password> \
---kubernetes-version 1.20.9 \
+--kubernetes-version 1.23.3 \
 --node-count 3 \
 --enable-addons monitoring,http_application_routing \
 --generate-ssh-keys \
